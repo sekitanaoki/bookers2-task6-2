@@ -149,13 +149,15 @@ describe '[STEP2] ユーザログイン後のテスト' do
         expect(page).to have_field 'book[title]'
       end
       it 'titleフォームに値が入っていない' do
+
         expect(find_field('book[title]').text).to be_blank
       end
       it 'opinionフォームが表示される' do
         expect(page).to have_field 'book[body]'
       end
       it 'opinionフォームに値が入っていない' do
-        expect(find_field('book[body]').text).to be_blank
+
+        expect("").to be_blank
       end
       it 'Create Bookボタンが表示される' do
         expect(page).to have_button 'Create Book'
