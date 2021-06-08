@@ -11,6 +11,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     @book = Book.new
+    @search = Book.ransack(params[:q])
   end
 
   def create
